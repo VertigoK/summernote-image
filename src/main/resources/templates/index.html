@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}">
+<!--Page content-->
+<th:block layout:fragment="contents">
+    <div class="container" style="text-align: center;">
+        <br>
+        <h3>Upload/store/load an image-included article in Summernote</h3>
+        <br>
+        <a th:href="@{/article}" class="btn btn-primary">List of Articles</a>
+        <a th:href="@{/article/write}" class="btn btn-warning">Write an Article</a>
+    </div>
+</th:block>
+</html>

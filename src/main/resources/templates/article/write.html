@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}">
+<!--Page content-->
+<th:block layout:fragment="contents">
+    <div class="container">
+        <form th:action="@{/article/write}" method="post">
+            <br style="clear: both;">
+            <h3 style="margin-bottom: 25px;">Try writing an image-included article!</h3>
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" class="form-control" id="title" name="title"
+                       placeholder="title" required>
+            </div>
+            <div class="form-group">
+                <label for="summernote">Content:</label>
+                <textarea class="form-control" id="summernote" name="content"
+                          placeholder="content" maxlength="1000" rows="9" required></textarea>
+            </div>
+            <br>
+            <button type="submit" id="submit" name="submit"
+                    class="btn btn-warning">Submit</button>
+        </form>
+    </div>
+    <script th:src="@{/js/upload.js}"></script>
+</th:block>
+</html>
